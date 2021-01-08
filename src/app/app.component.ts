@@ -36,22 +36,15 @@ export class AppComponent {
   }
 
 
-  spotRagging() {
-    this.NavCtrl.navigateForward("/spot-ragging");
-    this.showToast("Sport Ragging clicked");
+  Profile() {
+    this.NavCtrl.navigateForward("/profile");
   }
 
-  prevention() {
-    
-    this.NavCtrl.navigateForward("/preventions");
-    this.showToast("Prevention clicked");
-  }
-
-  dashboard(){
+  Dashboard() {
     this.NavCtrl.navigateForward("/dashboard");
-   
   }
 
+ 
   async showToast(message) {
     const toast = await this.toastController.create({
       color: "medium",

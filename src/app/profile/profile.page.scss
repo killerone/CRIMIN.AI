@@ -1,0 +1,21 @@
+.image {
+    position: absolute;
+    width: 100%;
+  }
+  
+  .image {
+    position: relative;
+    width: 100%; /* for IE 6 */
+  }
+  
+  .image-over {
+    position: absolute;
+    top: 70px;
+    left: 125px;
+    width: 100%;
+  }
+
+  ion-icon{
+      font-size: 30px;
+  }
+  

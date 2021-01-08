@@ -1,6 +1,7 @@
+
 ion-button {
   letter-spacing: 2px;
-  color: floralwhite;
+  color: rgb(207, 143, 15);
 }
 
 .invalid {
@@ -15,18 +16,16 @@ ion-content {
   background: #d0fffd;
 }
 
-
+a {
+  color: #f56e82;
+}
 
 ion-toolbar {
   color: #000000;
 }
 
 ion-title{
-  color:white;
   letter-spacing: 1.5px;
+  font-size: large;
   text-align: center;
 }
-
-ion-card{
-  margin-top: 150px;
-  }

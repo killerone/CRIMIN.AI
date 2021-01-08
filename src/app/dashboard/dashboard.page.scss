@@ -2,16 +2,16 @@ $fontcolor1: #fff;
 $fontfam1: "Courier New", Courier, monospace;
 
 ion-toolbar {
-  --background: #9edbca;
-  color: #000000;
+  --background: #49bac9;
+  color: $fontcolor1;
   // letter-spacing: 1px;
 }
 
-.profile-header {
-  height: 120px;
-  background-color: primary;
-  text-align: center;
-  border-radius: 5%;
+img {
+  height: 150px;
+}
+ion-card-content {
+  margin-right: 10px;
 }
 
 ion-icon[name="person-add-outline"] {
@@ -22,11 +22,11 @@ ion-icon[name="person-add-outline"] {
 }
 
 ion-fab {
-  color: primary;
+  color: medium;
 }
 ion-fab > ion-fab-button {
   margin: auto;
-  color: primary;
+  color: medium;
 }
 
 ion-fab-button {
@@ -43,5 +43,15 @@ ion-fab-button {
 }
 
 .icons {
-  color: $fontcolor1;
+  color: #49bac9;
+}
+
+.min-max-width {
+  max-width: 150px;
+  max-height: 150px;
+  margin: 0 auto;
+}
+
+ion-button {
+  display: inline-block;
 }

@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="dashboard"></ion-back-button>
+      <ion-back-button defaultHref="dashboard" style="color: white;"></ion-back-button>
     </ion-buttons>
-    <ion-title>Chatbot</ion-title>
+    <ion-title style="text-align: center;">Chatbot</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -33,7 +33,7 @@
     <ion-row align-items-center no-padding>
       <ion-col size="10">
         <textarea autosize maxRows="3" [(ngModel)]="message" (keyup.enter)="sendMessage()" name="message"
-          class="message-input" placeholder="send message ..."></textarea>
+          class="message-input" placeholder="Send message..."></textarea>
         <!-- <ion-input>
           </ion-input> -->
       </ion-col>

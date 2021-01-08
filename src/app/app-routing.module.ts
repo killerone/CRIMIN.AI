@@ -35,6 +35,18 @@ const routes: Routes = [
   {
     path: 'spot-ragging',
     loadChildren: () => import('./spot-ragging/spot-ragging.module').then( m => m.SpotRaggingPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'edit-profile',
+    loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+  },
+  {
+    path: 'change-password',
+    loadChildren: () => import('./change-password/change-password.module').then( m => m.ChangePasswordPageModule)
   }
 
 

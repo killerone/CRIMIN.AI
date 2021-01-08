@@ -78,7 +78,7 @@ export class AuthService {
       isAdmin: false,
     };
 
-    return this.db.list("users").push(userData);
+    return this.db.list("users").set(user.uid, userData);
   }
 
   AuthLogin(provider) {

@@ -12,13 +12,14 @@ import { NavController } from "@ionic/angular";
 })
 export class DashboardPage implements OnInit {
 
-  constructor(public router:Router,public NavCtrl: NavController) { }
+
+
+  constructor(public router: Router, public NavCtrl: NavController) { }
 
   ngOnInit() {
   }
 
-  async openChatbot(){
-    console.log(123);
+  async openChatbot() {
     this.router.navigateByUrl('chat');
   }
 

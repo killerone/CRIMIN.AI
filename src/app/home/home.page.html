@@ -43,7 +43,7 @@
             <div padding>
               <ion-button
                 expand="block"
-                color="primary"
+                color="light"
                 style="letter-spacing: 2px;"
                 [disabled]="!form.valid"
                 (click)="authService.SignIn(userMail.value, userPwd.value)"
@@ -56,11 +56,13 @@
           <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
             <div text-center>
               Don't have an account?
-              <a routerLink="/sign-up-form" color="primary"> Sign Up</a>
+              <a routerLink="/sign-up-form"> Sign Up</a>
             </div>
           </ion-col>
         </ion-row>
       </ion-grid>
     </form>
   </ion-card>
+  
+  
 </ion-content>

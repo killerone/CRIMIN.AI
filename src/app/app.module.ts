@@ -12,9 +12,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { environment } from "../environments/environment";
-import {  AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { UiComponent2Page } from './ui-component2/ui-component2.page';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AngularFireAuthModule,
+    AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     IonicModule.forRoot(),
@@ -35,4 +37,4 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

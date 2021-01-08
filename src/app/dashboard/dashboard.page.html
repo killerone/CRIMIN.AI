@@ -3,34 +3,43 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Dashboard</ion-title>
+    <ion-title style="text-align: center;">Dashboard</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card style="margin-top: 150px;">
-    <ion-button 
-                expand="block"
-                style="color: primary;"
-                style="letter-spacing: 2px;height: 150px;"
-                (click)="toSpotRagging()">Signs of Ragging
-    </ion-button>
-    <ion-button 
-                expand="block"
-                color="primary"
-                style="letter-spacing: 2px;height: 150px;margin-top: 30px;"
-                (click)="toPrevent()">Ragging Preventions
-    </ion-button>
+<ion-content fullscreen>
+  <ion-card>
+    <img src="../../assets/images/anti-ragging-committee-squad.jpg" />
+    <ion-card-content>
+        <h1><b>Welcome</b></h1>
+        For any student who slogs day and night to secure admission into a prestigious college, ragging can be his or
+        her worst nightmare come true. With our efforts we are trying to make college life a better experience for
+        students.
+    </ion-card-content>
   </ion-card>
-      <ion-fab
-        vertical="bottom"
-        horizontal="end"
-        slot="fixed"
-        style="padding-right: 20px;margin-bottom: 30px;"
-      >
-        <ion-fab-button color="primary" (click)="openChatbot()">
-            <ion-icon name="chatbubbles"></ion-icon>
-        </ion-fab-button>
-    </ion-fab>
-  
+  <ion-grid>
+    <ion-row style="margin-left: 15px;">
+      <ion-col offset-4>
+        <div>
+          <ion-button expand="block" color="light" class="ion-text-wrap min-max-width"
+            style="letter-spacing: 3px;height: 150px;width: 150px;" (click)="toSpotRagging()">Signs of Ragging
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-button expand="block" color="light" class="ion-text-wrap min-max-width"
+            style="letter-spacing: 2px;height: 150px;width: 150px;vertical-align: top;text-align: center;"
+            (click)="toPrevent()">Ragging Preventions
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="padding-right: 10px;margin-bottom: 1px;">
+    <ion-fab-button color="medium" (click)="openChatbot()">
+      <ion-icon  name="chatbubbles"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

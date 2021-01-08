@@ -10,19 +10,20 @@ const dialogflowURL = 'https://us-central1-chatbot-rektta.cloudfunctions.net/dia
   styleUrls: ['./ui-component2.page.scss'],
 })
 export class UiComponent2Page implements OnInit {
+  constructor(private http: HttpClient) { }
 
   messages = [];
   message;
   sending: boolean;
   @ViewChild(IonContent, { static: false }) content: IonContent;
-  constructor(private http: HttpClient) { }
+  sessionId = Math.random().toString(36).slice(-5);
 
-  
+
 
   ngOnInit() {
     this.addBotMessage('Hello, my name is Johanna. How can I help you? ');
+    this.addBotMessage('Type "HELP" to open Help Menu');
   }
-  sessionId = Math.random().toString(36).slice(-5);
   sendMessage(event) {
     const text = this.message;
     this.addUserMessage(text);
@@ -51,7 +52,7 @@ export class UiComponent2Page implements OnInit {
       sender: 'You',
       date: new Date()
     });
-    // this.content.scrollToBottom(200);
+    //this.content.scrollToBottom(200);
   }
 
   addBotMessage(text) {
@@ -63,7 +64,7 @@ export class UiComponent2Page implements OnInit {
     // if(this.content.scrollX) {
     //   // this.content.scrollToBottom(200);
     // }
-    // this.content.scrollToBottom(200);
+    //this.content.scrollToBottom(200);
   }
 
 }

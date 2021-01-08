@@ -1,19 +1,22 @@
 <ion-app>
   <ion-menu contentId="content1">
     <ion-header>
-      <ion-toolbar color="primary">
+      <ion-toolbar color="light">
         <ion-title style="letter-spacing: 1px;">Options</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list style="margin-top: 1rem;">
         <ion-menu-toggle auto-hide="false">
-          
-         
-          <ion-item (click)="dashboard()">
-            <ion-icon name="apps"></ion-icon>
+          <ion-item (click)="Profile()">
+            
+            <ion-label class="ion-label-class">Profile</ion-label>
+          </ion-item>
+          <ion-item (click)="Dashboard()">
+            
             <ion-label class="ion-label-class">Dashboard</ion-label>
           </ion-item>
+         
           <ion-item>
             <ion-label class="ion-label-class">Log Out</ion-label>
           </ion-item>

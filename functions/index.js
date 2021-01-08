@@ -10,6 +10,8 @@ admin.initializeApp({
   	databaseURL: 'ws://chatbot-rektta.firebaseio.com/'
 });
  
+const ref1 = admin.database().ref('data').push();
+
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
  
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
@@ -26,6 +28,24 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     agent.add(`I'm sorry, can you try again?`);
   }
 
+  // function helpHandler(agent) {
+  //     agent.add(`Welcome to the Help Menu!
+  //                Type 
+  //                  ~ 'File a complaint' - For registering a complaint
+  //                  ~ 'About' - To know about the application
+  //                  ~ 'Contact' - To get the contact details of the local authorities`);
+  //     agent.add(new Card({
+  //         title: `Title: this is a card title`,
+  //         imageUrl: 'https://dialogflow.com/images/api_home_laptop.svg',
+  //         text: `This is the body text of a card.  You can even use line\n  breaks and emoji! 💁`,
+  //         buttonText: 'This is a button',
+  //         buttonUrl: 'https://docs.dialogflow.com/'
+  //       })
+  //     );
+  //     agent.add(new Suggestion(`Quick Reply`));
+  //     agent.add(new Suggestion(`Suggestion`));
+  //     agent.setContext({ name: 'weather', lifespan: 2, parameters: { city: 'Rome' }});
+  //   }
 
 	function fileReportHandler(agent){
      const t1 = agent.parameters.prtype;
@@ -41,7 +61,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
      
      
      
-     return admin.database().ref('data').push().set({
+     return ref1.set({
        cdate: cdate,
        name: t2,
        college: t3,
@@ -54,11 +74,20 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
        who: t9
      });
    }
+
+   function aboutHandler(){}
+
+   function contactHandler(){}
+
+   function helpHandler(){}
+
    
   let intentMap = new Map();
   intentMap.set('Default Welcome Intent', welcome);
   intentMap.set('Default Fallback Intent', fallback);
   intentMap.set('FileReport', fileReportHandler);
+  intentMap.set('FileReport.about', aboutHandler);
+  intentMap.set('FileReport.contact', contactHandler);
+  intentMap.set('Help', helpHandler);
   agent.handleRequest(intentMap);
-  
 });
